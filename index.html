@@ -235,11 +235,13 @@ body {
 }
 .spots-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 300;
   line-height: 1;
   color: var(--warm);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 .spots-copy strong { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
 .spots-copy p { font-size: 13px; opacity: 0.7; line-height: 1.6; }
@@ -590,6 +592,40 @@ body {
 .contact-method-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 2px; }
 .contact-method-value { font-size: 16px; font-weight: 400; }
 
+.contact-location-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(30,26,22,0.12);
+  border-left: 3px solid var(--deep);
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--deep);
+  max-width: 480px;
+}
+.contact-location-note svg { flex-shrink: 0; margin-top: 2px; stroke: var(--deep); opacity: 0.7; }
+.contact-location-note strong { font-weight: 500; }
+
+.btn-book-big {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--deep);
+  color: var(--sand);
+  padding: 18px 36px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 36px;
+  transition: background 0.22s, transform 0.22s;
+}
+.btn-book-big:hover { background: #0a0806; transform: translateY(-2px); }
+.btn-book-big svg { stroke: var(--warm); }
+
 .footer-bar {
   background: var(--deep);
   padding: 20px 32px;
@@ -770,17 +806,17 @@ body {
     </div>
     <p class="hero-desc">Elite-level sports remedial massage, delivered to your home. The same standard of care I bring to professional athletes — now available to you.</p>
     <div class="hero-actions">
-      <a href="tel:0483780551" class="btn-primary">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call to Book
+      <a href="https://calendly.com/joshsportstherapy/1-hour-home-visit" target="_blank" class="btn-primary">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book Now
       </a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
   </div>
   <div class="hero-bottom">
     <div class="hero-stat">
-      <div class="hero-stat-num">10</div>
-      <div class="hero-stat-label">Spots Available</div>
+      <div class="hero-stat-num">Now</div>
+      <div class="hero-stat-label">Taking New Clients</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-num">$110–$190</div>
@@ -795,10 +831,10 @@ body {
 
 <!-- ── SPOTS BAND ── -->
 <div class="spots-band reveal">
-  <div class="spots-num">10</div>
+  <div class="spots-num">✦</div>
   <div class="spots-copy">
-    <strong>10 new client spots available now</strong>
-    <p>Taking on a select group of home-based clients. Once full, the waitlist opens — don't miss out.</p>
+    <strong>Now accepting new clients — book before my calendar fills</strong>
+    <p>Bookings are filling fast. Secure your regular session time now and get in before the wait.</p>
   </div>
 </div>
 
@@ -1053,7 +1089,15 @@ body {
 <div class="contact-wrap" id="contact">
   <div class="contact-inner">
     <h2 class="contact-heading">Book your<br><em>first session.</em></h2>
-    <p class="contact-sub">10 spots available. Drop me a call or text to lock yours in. I'll get back to you promptly.</p>
+    <p class="contact-sub">Currently taking new clients — the calendar fills quickly so the sooner you reach out, the sooner we can lock in a regular time that works for you.</p>
+    <div class="contact-location-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>When booking or reaching out, please include your <strong>suburb or location</strong> so I can plan travel and find a time that works for your area.</span>
+    </div>
+    <a href="https://calendly.com/joshsportstherapy/1-hour-home-visit" target="_blank" class="btn-book-big">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book a Session Online
+    </a>
     <div class="contact-methods">
       <a href="tel:0483780551" class="contact-method">
         <div class="contact-method-icon">
